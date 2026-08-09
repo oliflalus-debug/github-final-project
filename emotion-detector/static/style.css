@@ -1,0 +1,9 @@
+:root { font-family: Inter, Arial, sans-serif; color: #17223b; background: #eef4ff; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; }
+.card { width: min(680px, calc(100% - 48px)); padding: 42px; background: white; border-radius: 18px; box-shadow: 0 16px 45px #244a8426; }
+.eyebrow { color: #0f62fe; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+h1 { font-size: 42px; margin: 8px 0 12px; }
+label { display: block; font-weight: 700; margin: 28px 0 8px; }
+textarea { box-sizing: border-box; width: 100%; padding: 14px; border: 1px solid #8d9bb0; border-radius: 8px; font: inherit; }
+button { margin-top: 14px; padding: 12px 20px; border: 0; border-radius: 8px; color: white; background: #0f62fe; font-weight: 700; cursor: pointer; }
+#result { margin-top: 24px; padding: 18px; min-height: 48px; border-left: 4px solid #0f62fe; background: #f4f7fb; line-height: 1.5; }

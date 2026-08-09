@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emotion Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <p class="eyebrow">IBM AI Application</p>
+    <h1>Emotion Detector</h1>
+    <p>Enter a sentence to identify its emotion scores and dominant emotion.</p>
+    <label for="textToAnalyze">Text to analyze</label>
+    <textarea id="textToAnalyze" rows="5" placeholder="I am delighted with this project!"></textarea>
+    <button type="button" onclick="analyzeEmotion()">Analyze emotion</button>
+    <section id="result" aria-live="polite">Your analysis will appear here.</section>
+  </main>
+  <script>
+    async function analyzeEmotion() {
+      const text = document.getElementById('textToAnalyze').value;
+      const response = await fetch(`/emotionDetector?textToAnalyze=${encodeURIComponent(text)}`);
+      document.getElementById('result').textContent = await response.text();
+    }
+  </script>
+</body>
+</html>
